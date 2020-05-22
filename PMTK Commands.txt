@@ -1,0 +1,21 @@
+checksum link
+https://nmeachecksum.eqth.net/
+
+change baud rate 9600
+echo -e "\$PMTK251,9600*17\r\n" > /dev/ttyUSB0
+
+change baud rate 115200
+echo -e "\$PMTK251,115200*1F\r\n" > /dev/ttyUSB0
+
+set baud rate for USB
+stty 9600 < /dev/ttyUSB0
+
+listen to channel
+cat -v < /dev/ttyUSB0
+
+change frequency 10Hz
+echo -e "\$PMTK220,100*2F\r\n" > /dev/ttyUSB0
+
+change frequency 1Hz
+echo -e "\$PMTK220,1000*1F\r\n" > /dev/ttyUSB0
+
