@@ -1,0 +1,9 @@
+<launch>
+
+<node name="gps_setup_node" pkg="raspberry-pi-gps-ros" type="gps_setup_node.py">
+</node>
+
+
+<include file="$(find nmea_navsat_driver)/launch/nmea_serial_driver.launch" />
+
+</launch>
